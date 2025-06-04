@@ -19,6 +19,9 @@ app.get('/check-subscription', async (req, res) => {
     res.status(500).json({ error: 'Telegram API error', details: e.message });
   }
 });
+app.get('/', (req, res) => {
+  res.send('TenderCalc backend is alive!');
+});
 
 app.listen(3000, () => {
   console.log('TenderCalc backend running on port 3000');
